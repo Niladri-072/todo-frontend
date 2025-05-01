@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Content wrapped inside the container div for the neon border effect -->
+    <div class="container">
+        <h1>Cloud To-Do List</h1>
+
+        <!-- Task Input and Button -->
+        <input type="text" id="taskInput" placeholder="Enter task...">
+        <button onclick="addTask()">Add Task</button>
+
+        <!-- Task List -->
+        <ul id="taskList"></ul>
+
+        <!-- Motivational Quote Section -->
+        <h2>Motivational Quote</h2>
+        <p id="quoteText">Loading...</p>
+
+        <!-- Weather Section -->
+        <h2>Weather</h2>
+        <input type="text" id="cityInput" placeholder="Enter city">
+        <button onclick="getWeather()">Get Weather</button>
+        <p id="weatherData"></p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

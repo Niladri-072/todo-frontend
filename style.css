@@ -1,0 +1,163 @@
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #141414; /* Dark background for a contrasting effect */
+    color: #01a109; /* White text */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container with background image */
+.container {
+    background-image: url('https://c1.wallpaperflare.com/preview/987/720/965/planner-plan-planning-to-do-to-do-list-august.jpg'); /* Your Image URL */
+    background-size: cover; /* Ensures the background covers the entire container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    position: relative; /* Necessary for the overlay */
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6); /* Soft neon border around the content */
+}
+
+/* Dark overlay for better contrast */
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); /* Darker overlay with 70% opacity */
+    border-radius: 15px; /* Match the container's border-radius */
+    z-index: -1;
+}
+
+/* Neon border effect */
+.container::after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(45deg, #ecb211, #f2f566);
+    background-size: 400% 400%;
+    border-radius: 15px;
+    z-index: -1;
+    animation: neonBorder 6s ease-in-out infinite; /* Slower animation */
+}
+
+/* Neon border animation */
+@keyframes neonBorder {
+    0% {
+        background-position: 400% 0%;
+    }
+    50% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: 400% 0%;
+    }
+}
+
+/* Heading styles */
+h1 {
+    font-size: 3em;
+    font-weight: bold;
+    color: #d46700; /* White text for better contrast */
+    text-shadow: 2px 2px 8px rgba(110, 101, 101, 0.5);
+    margin-bottom: 20px;
+}
+
+/* Input and Button Styling */
+input, button {
+    margin: 10px;
+    padding: 12px 20px;
+    border-radius: 25px;
+    border: none;
+    font-size: 1.1em;
+    transition: 0.3s ease-in-out;
+}
+
+/* Input field specific styling */
+input {
+    width: 250px;
+    margin-bottom: 15px;
+    background-color: rgba(255, 231, 196, 0.6); /* Slightly transparent input background */
+    color: #b30101;
+    border: 1px solid rgba(245, 106, 64, 0.6);
+    outline: none;
+}
+
+/* Button styling with hover effect */
+button {
+    background-color: #00b4d8;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background-color: #0077b6;
+    transform: scale(1.05);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Quote styling */
+#quoteText {
+    font-size: 1.5em;
+    font-style: italic;
+    margin-top: 30px;
+    color: #0a0101; /* Ensure the quote text is visible */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Weather section styling */
+#weatherData {
+    font-size: 1.2em;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #fc3a3ad8; /* Ensure the weather text is visible */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Centering the content */
+#taskList {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#taskList li {
+    background-color: rgba(250, 213, 213, 0.8); /* Slightly transparent task background */
+    color: #ee8829;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Task Delete button */
+.delete-btn {
+    background-color: #ff3860;
+    color: #fff;
+    border-radius: 50%;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.delete-btn:hover {
+    background-color: #ff5c8d;
+}
