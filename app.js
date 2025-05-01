@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3000"; // Change this to your deployed backend URL
+const API_URL = "https://todo-backend-levl.onrender.com";
 
 // Add a new task
 async function addTask() {
